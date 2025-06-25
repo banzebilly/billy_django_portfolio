@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Banze Billy{% endblock %}</title>
+    <meta name="description" content="A responsive portfolio template" />
+    <meta name="keywords" content="portfolio, resume, Banze Billy" />
+    <meta name="author" content="Retrina Group" />
+
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+
+   
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/LineIcons.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/color/orange-color.css' %}" id="option-color">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+   
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+</head>
+<body data-spy="scroll" data-target="#scrollspy" data-offset="1" class="flat-demo dark">
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <span class="loader"></span>
+
+    <!-- Navigation -->
+    {% include 'includes/navbar.html' %}
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <!-- Navigation Buttons -->
+<!-- Navigation Buttons -->
+<div class="next-prev-page">
+    <button type="button" onclick="window.location.href='{% url 'about' %}'" class="prev-page bg-base-color">
+        <i class="fa fa-angle-up text-white"></i>
+    </button>
+    <button type="button" onclick="window.location.href='{% url 'contact' %}'" class="next-page bg-base-color mt-3">
+        <i class="fa fa-angle-down text-white"></i>
+    </button>
+</div>
+
+
+
+    <!-- Color Switcher -->
+    <div id="color-switcher" class="color-switcher">
+        <div class="text-center color-pallet hide">
+            <h6 class="theme-skin-title">Theme Skin</h6>
+            <ul class="theme-skin list-inline">
+                <li class="list-inline-item">
+                    <a href="javascript:void(0)" class="flat-skin active">Flat</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="javascript:void(0)" class="neo-skin">Neo</a>
+                </li>
+            </ul>
+
+            <h6 class="my-2 color-scheme-title">Light & Dark Version</h6>
+            <ul class="color-scheme list-inline">
+                <li class="list-inline-item">
+                    <a href="javascript:void(0)" class="light-scheme active"><i class="lni-sun"></i> Light</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="javascript:void(0)" class="dark-scheme"><i class="lni-night"></i> Dark</a>
+                </li>
+            </ul>
+        </div>
+        <div class="pallet-button hide">
+            <a href="#" class="cp-toggle"><i class="fa fa-cog fa-spin"></i></a>
+        </div>
+    </div>
+
+    <!-- JS Files -->
+     
+    <script src="{% static 'assets/js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.countTo.js' %}"></script>
+    <script src="{% static 'assets/js/typed.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/particles-01.min.js' %}"></script>
+    <script src="{% static 'assets/js/particles-01.app.js' %}"></script>
+    <script src="{% static 'assets/js/arshia.js' %}"></script>
+
+</body>
+</html>

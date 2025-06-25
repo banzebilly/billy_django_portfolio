@@ -1,0 +1,51 @@
+  <div class="mt-4">
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ blog.title }} | Banze Billy{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <!-- Title Section -->
+  <div class="text-center">    <h2 class="mb-3">Blog <span class="base-color">Details</span></h2>
+    <p class="mx-auto" style="max-width: 450px;">{{ blog.short_description }}</p>
+  </div>
+
+  <!-- Image Section -->
+
+    <!-- Image Section -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+        <img src="{{ blog.image.url }}" class="img-fluid rounded shadow" alt="{{ blog.title }}">
+      </div>
+    </div>
+
+ 
+
+  <!-- Description Section -->
+  <div class="mt-4">
+    <h5>Full Description</h5>
+    <p>{{ blog.description }}</p>
+    
+  
+
+  </div>
+
+  <!-- Project Info -->
+  <div class="row contact-info mt-5 text-center">
+    <div class="col-12 col-md-6 mb-3 mb-md-0">
+      <h6>Created by:</h6>
+      <p class="mb-0">Banze Billy</p>
+    </div>
+    <div class="col-12 col-md-6">
+      <h6>Completed on:</h6>
+      <p class="mb-0">{{ blog.created_at }}</p>
+    </div>
+  </div>
+     <!-- Back Button -->
+    <div class="text-center mt-5">
+      <a href="{% url 'blog_home' %}" class="btn btn-danger">← Back to Work List</a>
+    </div>
+
+
+</div>
+{% endblock %}

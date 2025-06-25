@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container" style="padding: 50px;">
+        {% if user.is_authenticated %}
+        <h2 class="text-center">Automate The Boring Stuff With Django</h2>
+        <div class="row pt-5">
+            <!-- Import data -->
+            <div class="col-md-4">
+                <a href="{% url 'import_data' %}" class="text-decoration-none text-dark">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary">
+                            <h4 class="text-white">Import Data</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Imports data from CSV file to any table.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Export Data -->
+            <div class="col-md-4">
+                <a href="{% url 'export_data' %}" class="text-decoration-none text-dark">
+                    <div class="card shadow">
+                        <div class="card-header bg-success">
+                            <h4 class="text-white">Export Data</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Exports data from a specific table to a CSV file.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Bulk Emails -->
+            <div class="col-md-4">
+                <a href="{% url 'send_email' %}" class="text-decoration-none text-dark">
+                    <div class="card shadow">
+                        <div class="card-header bg-danger">
+                            <h4 class="text-white">Bulk Emails</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Sends bulk emails to users</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <!-- Email Tracking -->
+            <div class="col-md-4">
+                <a href="{% url 'track_dashboard' %}" class="text-decoration-none text-dark">
+                    <div class="card shadow">
+                        <div class="card-header bg-warning">
+                            <h4 class="text-white">Email Tracking</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Tracks emails and shows open and click rate</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Compress Images -->
+            <div class="col-md-4">
+                <a href="{% url 'compress' %}" class="text-decoration-none text-dark">
+                    <div class="card shadow">
+                        <div class="card-header bg-danger">
+                            <h4 class="text-white">Compress Images</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Compresses Image files and reduces the size</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Web Scraping -->
+            <div class="col-md-4">
+                <a href="{% url 'stock_analysis' %}" class="text-decoration-none text-dark">
+                    <div class="card shadow">
+                        <div class="card-header bg-warning">
+                            <h4 class="text-white">Stock Market Analysis</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Stock Market Analysis - Web  Scraping</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% else %}
+        <div class="home-info pt-5">
+            <h2 class="text-center">Automate The Boring Stuff with Django</h2>
+            <p class="lead text-center text-muted">
+                "Automate the Boring Stuff with Django" is a project-based course to build various tools using the Django web framework to simplify and streamline repetitive and routine tasks in web development, allowing developers to focus on more complex and creative aspects of their projects.
+            </p>
+            <div style="display: flex; justify-content:center;">
+                <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+                &nbsp;<a class="btn btn-success" href="{% url 'register' %}">Register</a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

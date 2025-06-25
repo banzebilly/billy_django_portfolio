@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <!--   About Start   -->
+  <section id="about" class="about">
+      <div class="display-table">
+          <div class="display-content">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div class="text-center title">
+                              <h2 class="text-black">About <span class="base-color">Me</span></h2>
+                              <p class=" max-width-450 mb-5">
+                                I m Banze Billy ,Self-driven and highly skilled Software Engineer with expertise in Python, Django, PostgreSQL, and REST API development.
+                                
+                              </p>
+                          </div>
+                      </div>
+                      <div class="col-lg-6">
+                          <div class="image-border">
+                              <img src="{% static 'assets/img/billy2.png' %}" alt="About Image" />
+                          </div>
+                      </div>
+                      <br>
+                      
+                      <div class="col-lg-6 mt-4 mt-lg-0">
+                          <div class="personal-item ">
+                              <h3 class="text-black mt-4 mt-lg-0"><span class="base-color">S.E</span> Software Engineer</h3>
+                              <div class="row">
+                                  <div class="col-6 personal-info">
+                                      <ul class="list-unstyled pt-4">
+                                          <li><p>Birthday : <span> 6 may 1993</span></p></li>
+                                          <li><p>Website : <span>banzebillydev.co.za </span></p></li>
+                                          <li><p>Phone : <span> +27 835999310</span></p></li>
+                                          <li><p>City : <span> johannesburg, SA</span></p></li>
+                                      </ul>
+                                  </div>
+                                  <div class="col-6 personal-info">
+                                      <ul class="list-unstyled pt-4">
+                                          <li><p>Age : <span> 30</span></p></li>
+                                          <li><p>Degree : <span> Certificate</span></p></li>
+                                          <li><p>Mail : <span> bbanze49@gmail.com</span></p></li>
+                                          <li><p>Freelance : <span> Available</span></p></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                         <div class="button-border mt-3 mb-lg-0 mr-4">
+                            <a 
+                                href="{% static 'assets/img/banzebilly-cv.pdf' %}" 
+                                class="pill-button" 
+                                download
+                            >
+                                Download CV
+                            </a>
+
+                        </div>
+
+                          <div class="button-border mt-3 mb-lg-0 to-contact">
+                              <a href="{% url 'contact' %}" class="pill-button">Hire Me</a>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Count up Start -->
+                  <div id="count-up" class="count-up text-center box-border">
+                      <div class="row">
+                          <!-- Item-01 -->
+                    
+                          <!-- Item-04 -->
+                           <div class="col-12 col-md-10 mx-auto">
+                                <p class="mb-0 text-white text-justify small text-md-base">
+                                    A HyperionDev graduate, I have designed and built full-stack web applications, implemented automation,
+                                    and optimized backend systems for performance and scalability.<br><br>
+
+                                    Transitioning from an accounting background, I bring a strong analytical mindset and problem-solving skills
+                                    to software engineering.<br><br>
+
+                                    My experience includes developing and deploying real-world projects with authentication, payment integration,
+                                    and data processing, demonstrating my ability to build secure and efficient software solutions.<br><br>
+
+                                    I am actively seeking an opportunity to contribute my skills to a dynamic team where I can drive innovation
+                                    and continue growing as a developer.
+                                </p>
+                            </div>
+
+                          
+                      </div>
+                  </div>
+                  <!--  Count up End  -->
+                  <!--  Service Start  -->
+                  <div class="services">
+                      <div class="row mt-5 ">
+                          <div class="col-12">
+                              <h3 class="mb-0 text-dark">What <span class="base-color">I'm Doing</span></h3>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <!-- Item 01 -->
+                          <div class="col-lg-4 text-left">
+                              <div class="services-item box-hover-border">
+                                  <div class="float-left mt-lg-1 d-inline-block services-icon">
+                                   <i class="lni-code  size-md base-color"></i>
+
+
+                                  </div>
+                                  <div class="services-content">
+                                        <h5 class="mb-3">Mentoring & Tutoring (Python, Django, Web Dev)</h5>
+                                        <p class="text-muted mb-0">
+                                            I provide personalized mentorship for aspiring developers, career switchers.<br><br>
+                                            I help developers confidently navigate Linux systems and use essential command-line tools.<br><br>
+                                            Django REST Framework (DRF) & real-world use cases.<br><br>
+                                            Code review and best practices guidance.<br><br>
+                                            Django project development (models, views, templates, forms, APIs).
+                                        </p>
+                                    </div>
+
+                                 
+                              </div>
+                          </div>
+                          <!-- Item 02 -->
+                          
+                        <div class="col-lg-4 text-left">
+                            <div class="services-item box-hover-border">
+                                    <div class="float-left mt-lg-1 d-inline-block services-icon">
+                                    <i class="lni-wallet  size-md base-color"></i>
+                                    </div>
+                                    <div class="services-content">
+                                    <h5 class="mb-3">Payment Integration</h5>
+                                    <p class="text-muted mb-0">
+                                        I have hands-on experience integrating secure payment systems into Django applications.<br><br>
+
+                                        I’ve successfully worked with PayPal, and I can also implement other popular gateways such as:<br><br>
+
+                                        <strong>• Flutterwave</strong> – Popular in African markets<br>
+                                        <strong>• Paystack</strong> – Widely used across Africa<br><br>
+
+                                        Whether you're building a marketplace, a SaaS platform, or a service portal, I can integrate the right payment system to ensure smooth, secure, and user-friendly transactions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                          <!-- Item 03 -->
+                          <div class="col-lg-4 text-left">
+                              <div class="services-item box-hover-border">
+                                  <div class="float-left mt-lg-1 d-inline-block services-icon">
+                                      <i class="lni-code-alt size-md base-color"></i>
+                                  </div>
+                                 <div class="services-content">
+                                <h5 class="mb-3">Full-Stack Web Application Development</h5>
+                                    <p class="text-muted mb-0">
+                                        I’ve built full-stack apps using:<br><br>
+                                        Django for backend<br>
+                                        Styled with HTML, CSS, Bootstrap<br>
+                                        (Basic knowledge of React)<br><br>
+                                        
+                                        Custom web portals for businesses<br>
+                                        Hotel booking, Doctor Booking System with video calls and appointment systems<br>
+                                        Internal management systems (HR, CRM, etc.)
+                                    </p>
+                                </div>
+
+                              </div>
+                          </div>
+                          <!-- Item 04 -->
+                          <div class="col-lg-4 text-left">
+                              <div class="services-item box-hover-border">
+                                  <div class="float-left mt-lg-1  d-inline-block services-icon">
+                                      <i class="lni-database size-md base-color"></i>
+                                  </div>
+                                  <div class="services-content">
+                                      <h5 class="mb-3">Database Design & Optimization</h5>
+                                        <p class="text-muted mb-0">
+                                            I work with SQL and PostgreSQL to design efficient, scalable databases. I can:
+                                            <br><br>
+                                            • Design normalized, well-structured schemas<br>
+                                            • Write optimized and secure SQL queries<br>
+                                            • Set up relational models using Django ORM<br>
+                                            • Handle data migrations, validation, and backups
+                                        </p>
+
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Item 05 -->
+                          <div class="col-lg-4 text-left">
+                              <div class="services-item box-hover-border">
+                                  <div class="float-left mt-lg-1 d-inline-block services-icon">
+                                      <i class="lni-cog size-md base-color mb-0"></i>
+                                  </div>
+                                  <div class="services-content">
+                                    <h5 class="mb-3">Automation & Scripting</h5>
+                                    <p class="text-muted mb-0">
+                                        With Python, I specialize in building powerful automation tools that reduce manual effort, save time, and improve accuracy across business processes.:
+                                        <br><br>
+                                         <strong>Media Optimization</strong> – Automated image compression or resizing for faster websites and better storage management.<br>
+                                        • <strong>Email Automation</strong> – For marketing campaigns, user verification, follow-up reminders, bulk sending, and smart email tracking (e.g., open/click detection).<br>
+                                        • <strong>Data Handling</strong> – Import/export automation for CSV, Excel.<br>
+                                    </p>
+
+                                    
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- Item 06 -->
+                        <div class="col-lg-4 text-left">
+                            <div class="services-item box-hover-border">
+                                <div class="float-left mt-lg-1 d-inline-block services-icon">
+                                    <i class="lni-briefcase size-md base-color"></i>
+                                </div>
+                                <div class="services-content">
+                                    <h5 class="mb-3">Freelancer Services</h5>
+                                    <p class="text-muted mb-0">
+                                        As a dedicated freelancer, I offer expert software development tailored to your unique needs. Whether it's building dynamic web apps, automating workflows, or integrating essential features, 
+                                        I deliver high-quality, scalable solutions on time and within budget.
+                                        <br><br>
+                                        Collaborate with a professional who values clear communication, timely delivery, and clean, maintainable code. Let's bring your project ideas to life with efficiency and passion.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                      </div>
+
+                  </div>
+                  <!--   Service End   -->
+                  <!--   Client Start  -->
+                 
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--    About End    -->
+{% endblock %}
