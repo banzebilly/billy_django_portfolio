@@ -144,10 +144,10 @@ STATICFILES_DIRS = [  # ← FIXED: Use the correct key
 ]
 
 # Media files (Uploads)
+
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-
-
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
