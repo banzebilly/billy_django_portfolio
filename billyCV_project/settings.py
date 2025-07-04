@@ -29,11 +29,10 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 from decouple import config
 
-ALLOWED_HOSTS = [
-    'banzebillydev.co.za',
-    'www.banzebillydev.co.za',
-    'billy-django-portfolio.onrender.com',  # Keep this for health checks & fallback
-]
+ALLOWED_HOSTS = ['*']  #'banzebillydev.co.za',
+    # 'www.banzebillydev.co.za',
+    # 'billy-django-portfolio.onrender.com',
+
 
 
 
