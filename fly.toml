@@ -5,6 +5,7 @@
 
 # fly.toml app configuration file for banze-billy-django-cv
 
+
 app = 'banze-billy-django-cv'
 primary_region = 'jnb'
 console_command = '/code/manage.py shell'
@@ -17,9 +18,9 @@ console_command = '/code/manage.py shell'
 [http_service]
   internal_port = 8000
   force_https = true
-  auto_stop_machines = 'stop'
+  auto_stop_machines = false       # <--- change to false to disable auto stop
   auto_start_machines = true
-  min_machines_running = 0
+  min_machines_running = 1         # <--- keep at least 1 machine running
   processes = ['app']
 
 [[vm]]
@@ -31,7 +32,6 @@ console_command = '/code/manage.py shell'
   guest_path = '/code/staticfiles'
   url_prefix = '/static/'
 
-# ✅ Only one volume mount is allowed
 [[mounts]]
   source = "data"
   destination = "/data"
