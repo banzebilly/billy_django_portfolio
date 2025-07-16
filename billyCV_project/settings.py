@@ -29,7 +29,8 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 from decouple import config
 
-ALLOWED_HOSTS = ['*']  #'banzebillydev.co.za',
+ALLOWED_HOSTS = ['banze-billy-django-cv.fly.dev', 'localhost', '127.0.0.1']
+
     # 'www.banzebillydev.co.za',
     # 'billy-django-portfolio.onrender.com',
 
