@@ -3,6 +3,8 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
+# fly.toml app configuration file for banze-billy-django-cv
+
 app = 'banze-billy-django-cv'
 primary_region = 'jnb'
 console_command = '/code/manage.py shell'
@@ -26,14 +28,10 @@ console_command = '/code/manage.py shell'
   cpus = 1
 
 [[statics]]
-  guest_path = '/code/static'
+  guest_path = '/code/staticfiles'
   url_prefix = '/static/'
 
-
+# ✅ Only one volume mount is allowed
 [[mounts]]
   source = "data"
   destination = "/data"
-
-[[mounts]]
-  source = "media"
-  destination = "/app/media"
