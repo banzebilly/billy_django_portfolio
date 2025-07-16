@@ -30,6 +30,10 @@ console_command = '/code/manage.py shell'
   url_prefix = '/static/'
 
 
-[mounts]
-source = "data"
-destination = "/data"
+[[mounts]]
+  source = "data"
+  destination = "/data"
+
+[[mounts]]
+  source = "media"
+  destination = "/app/media"
