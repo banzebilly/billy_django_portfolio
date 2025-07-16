@@ -141,6 +141,9 @@ STATICFILES_DIRS = [  # ← FIXED: Use the correct key
     BASE_DIR / 'billyCV_project' / 'static',  # Your custom static directory
 ]
 
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Media files (Uploads)
 
 
